@@ -16,18 +16,17 @@ class MyApp extends StatelessWidget {
     return MultiProvider(
       providers: [
         ChangeNotifierProvider(create: (context) => RegistrationProvider()),
-        ChangeNotifierProvider(create: (context) => UserProvider()),
-        ChangeNotifierProvider(create: (context) => UserUpdateProvider())
+
       ],
       child: ScreenUtilInit(
           designSize: const Size(392.72, 850.90),
           minTextAdapt: true,
-          builder: (BuildContext context, Widget? child) => MaterialApp(
+          builder: (BuildContext context, Widget? child) => MaterialApp(debugShowCheckedModeBanner: false,
                 title: 'User App',
                 theme: ThemeData(
                   primarySwatch: Colors.blue,
                 ),
-                home: const RegistrationScreen(),
+                home: const HomeScreen(),
               )),
     );
   }

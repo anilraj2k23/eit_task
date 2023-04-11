@@ -9,6 +9,7 @@ Future<UserModel> getUserDetails(  {required String id}) async {
 
   if (response.statusCode == 200) {
     String responseString = await response.stream.bytesToString();
+    print(responseString);
     return userModelFromJson(responseString);
   } else {
     throw Exception('Failed to get user details.');

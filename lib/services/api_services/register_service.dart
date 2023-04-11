@@ -12,6 +12,7 @@ import 'package:http/http.dart' as http;
   };
 
   var request = http.Request('POST', Uri.parse(ApiConstants.baseUrl+ApiConstants.registerEndpoint));
+
   request.bodyFields = {
     'email': email,
     'password': password
@@ -22,6 +23,7 @@ import 'package:http/http.dart' as http;
 
   if (response.statusCode == 200) {
     String responseString = await response.stream.bytesToString();
+    print(response);
     return userRegisterModelFromJson(responseString);
   } else {
     throw Exception(response.reasonPhrase);

@@ -15,6 +15,13 @@ class UserModel {
     data: Data.fromJson(json["data"]),
     support: Support.fromJson(json["support"]),
   );
+
+  static   UserModel initialUserData = UserModel(
+      data: Data(
+          id: 0, email: '', firstName: "", lastName: '', avatar: ''),
+      support: Support(url: '', text: ''));
+
+
 }
 
 class Data {

@@ -1,5 +1,5 @@
 import 'package:eit_task/models/models.dart';
- 
+
 import 'package:eit_task/screens/widgets/build_custom_snackbar.dart';
 import 'package:eit_task/services/services.dart';
 import 'package:flutter/material.dart';

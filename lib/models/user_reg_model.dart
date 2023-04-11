@@ -8,7 +8,7 @@ class UserRegisterModel {
     required this.token,
   });
 
-  int id;
+  String id;
   String token;
 
   factory UserRegisterModel.fromJson(Map<String, dynamic> json) => UserRegisterModel(

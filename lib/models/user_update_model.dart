@@ -4,17 +4,17 @@ UserUpdateModel userUpdateModelFromJson(String str) => UserUpdateModel.fromJson(
 
 class UserUpdateModel {
   UserUpdateModel({
-    required this.name,
+    required this.address,
     required this.job,
     required this.updatedAt,
   });
 
-  String name;
+  String address;
   String job;
   DateTime updatedAt;
 
   factory UserUpdateModel.fromJson(Map<String, dynamic> json) => UserUpdateModel(
-    name: json["name"],
+    address: json["address"],
     job: json["job"],
     updatedAt: DateTime.parse(json["updatedAt"]),
   );

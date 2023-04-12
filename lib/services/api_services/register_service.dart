@@ -25,7 +25,7 @@ import 'package:http/http.dart' as http;
     String responseString = await response.stream.bytesToString();
     print(response);
     return userRegisterModelFromJson(responseString);
-  } else {
+  } else {   print(response.reasonPhrase);
     throw Exception(response.reasonPhrase);
   }
 }
